@@ -42,8 +42,6 @@ public class RtgController {
 
 		ResponseRatingClient clientertg = servicecliente.obtenerRating(headers, clientrequest);
 
-		System.out.println(clientertg.toString());
-
 		return ResponseEntity.ok(clientertg);
 	}
 
