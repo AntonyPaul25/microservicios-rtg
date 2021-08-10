@@ -8,5 +8,7 @@ import cr.microservicios.rtg.entity.ResponseRatingClient;
 public interface ClienteRtgSerice {
 
 	public ResponseRatingClient obtenerRating(HttpHeaders headerMap, ClienteRequest client);
+	
+	
 
 }

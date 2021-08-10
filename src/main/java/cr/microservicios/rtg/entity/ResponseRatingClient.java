@@ -58,6 +58,10 @@ public class ResponseRatingClient {
 	public void setUpdateDate(String updateDate) {
 		this.updateDate = updateDate;
 	}
+	@Override
+	public String toString() {
+		return "ResponseRatingClient [SEICode=" + SEICode + ", SEI=" + SEI + "]";
+	}
 
 	
 	

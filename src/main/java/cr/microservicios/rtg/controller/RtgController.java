@@ -13,14 +13,19 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import cr.microservicios.commons.entity.ClienteRequest;
+import cr.microservicios.commons.entity.LogMDL;
 import cr.microservicios.rtg.entity.ResponseRatingClient;
 import cr.microservicios.rtg.services.ClienteRtgSerice;
+import cr.microservicios.rtg.services.LogMDLService;
 
 @RestController
 public class RtgController {
 
 	@Autowired
 	private ClienteRtgSerice servicecliente;
+
+	@Autowired
+	private LogMDLService logservice;
 
 	@PostMapping
 	public ResponseEntity<?> prueba(@RequestBody ClienteRequest clientrequest) {
@@ -41,6 +46,10 @@ public class RtgController {
 		headers.add("X-INT-User-Id", "BSE0000");
 
 		ResponseRatingClient clientertg = servicecliente.obtenerRating(headers, clientrequest);
+
+		logservice.save(new LogMDL(clientertg.toString()));
+
+		System.out.println(clientertg.toString());
 
 		return ResponseEntity.ok(clientertg);
 	}
