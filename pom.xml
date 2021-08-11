@@ -27,6 +27,13 @@
 			<version>0.0.1</version>
 		</dependency>
 
+		<!-- Referencia a librería de métodos comunes de microservicios (CRUD) -->
+		<dependency>
+			<groupId>cr.microservicios.common</groupId>
+			<artifactId>cr-microservicios-common</artifactId>
+			<version>0.0.1</version>
+		</dependency>
+
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-data-jpa</artifactId>
