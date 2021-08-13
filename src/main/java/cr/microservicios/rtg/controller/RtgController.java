@@ -35,7 +35,7 @@ public class RtgController {
 	private LogMDLService logservice;
 
 	@PostMapping
-	public ResponseEntity<?> prueba(@Valid @RequestBody ClienteRequest clientrequest, BindingResult result)
+	public ResponseEntity<?> obtenerRTG(@Valid @RequestBody ClienteRequest clientrequest, BindingResult result)
 			throws Exception {
 
 		if (result.hasErrors()) {
